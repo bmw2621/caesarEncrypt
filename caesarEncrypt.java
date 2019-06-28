@@ -23,6 +23,7 @@ public class Main {
             message = scanner.nextLine();
         }else{
             Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter data:");
             message = scanner.nextLine();
         }
         int s = Integer.parseInt(argsHash.get("-key"));
@@ -66,6 +67,7 @@ public class Main {
 
     private static StringBuilder shift(HashMap<String, String> argsHash, String message, int s) {
         StringBuilder result = new StringBuilder();
+        message = message.toLowerCase();
         if (argsHash.get("-mode").equals("enc")) {
             for (int i = 0; i < message.length(); i++) {
                 if(message.charAt(i) == " ".charAt(0)){
